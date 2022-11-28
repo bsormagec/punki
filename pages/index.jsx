@@ -6,7 +6,7 @@ export default () => {
   return (
     <div style={{ fontFamily: 'monospace' }}>
       <div style={{ width: '600px' }}>
-        <h1>{'Great Lakes Trader'}</h1>
+        <h1>{'Taipan Punks'}</h1>
         <h3>{'A Taipan-like game of profit and adventure'}</h3>
         <p>
           {`
