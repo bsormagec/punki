@@ -9,7 +9,7 @@ const Selling = (props) => {
     <div style={{ padding: '10px', width: '320px' }}>
 
       <h3 style={{ display: 'flex', justifyContent: 'space-between' }}>
-        {'Sell what item?'}
+        {'What do you want to sell?'}
         <button onClick={setCurrentScene.bind(null, UI_SCENES.NULL)}>{'Back'}</button>
       </h3>
 
