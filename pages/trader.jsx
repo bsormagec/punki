@@ -68,7 +68,7 @@ class Interface extends React.Component {
           <h1>{'Nomadic Punks Trader'}</h1>
           <h2>{`${currentLocation}`}</h2>
           <div>{`${date.day} ${date.season} ${date.year}`}</div>
-          <audio src="/static/outside-your-comfort-zone.mp3" autoPlay muted={!this.state.musicPlaying} loop />
+          <audio src="/mp3/unstoppable-adventure.mp3" autoPlay muted={!this.state.musicPlaying} loop />
         </div>
 
         <Stocks />
