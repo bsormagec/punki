@@ -15,8 +15,8 @@ const Banking = ({ deposit, withdraw, setCurrentScene }) => {
       </h3>
       <input
         type="text"
-        style={{ marginBottom: '5px', marginRight: '5px', textAlign: 'center' }}
-        placeholder="amount"
+        style={{ marginBottom: '2px', marginRight: '5px', textAlign: 'center' }}
+        placeholder="Amount"
         ref={textInput}
       />
       <button onClick={() => deposit(parseInt(textInput.current.value, 10))}>{'Deposit'}</button>
