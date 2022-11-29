@@ -1,5 +1,5 @@
-# READ HIM
+# Nomadic Punks
 
-🎶 Music by [`snkrthief`](https://soundcloud.com/snkrthief)
+🎶 Music licensed from [`Adigold`](https://elements.envato.com/user/Adigold)
 
-#### MIT License
+# Pagzi Tech Inc.
