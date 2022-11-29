@@ -10,8 +10,8 @@ class MyApp extends App {
     return (
       <Container>
         <Head>
-          <title>{'Great Lakes Trader'}</title>
-          <meta name="description" content="A Taipan-like game of profit and adventure on the Saint Lawrence River and the Great Lakes"/>
+          <title>{'Nomadic Punks Trader'}</title>
+          <meta name="description" content="A Taipan-like game of profit and adventure in a nomadic world of tribes."/>
         </Head>
         <Provider store={reduxStore}>
           <Component {...pageProps} />
