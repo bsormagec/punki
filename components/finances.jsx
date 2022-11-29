@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 const Finances = ({ cash, bank, loan }) => {
   return (
     <div className="panel">
-      <h3>{'Finances'}</h3>
+      <h3>{'Assets'}</h3>
       {[
         { title: 'Cash', value: cash },
         { title: 'Bank', value: bank },
