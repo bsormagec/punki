@@ -11,7 +11,7 @@ const MoneyLender = ({ borrow, repay, setCurrentScene, cash, hasBorrowed }) => {
   return (
     <div style={{ padding: '10px', width: '320px', display: 'flex', flexDirection: 'column' }}>
       <h3 style={{ display: 'flex', justifyContent: 'space-between' }}>
-        {'The Money Lender'}
+        {'Loan Shark'}
         <button onClick={setCurrentScene.bind(null, UI_SCENES.NULL)}>{'Back'}</button>
       </h3>
       {
