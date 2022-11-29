@@ -16,17 +16,17 @@ const Choices = ({ setCurrentScene, currentIsland, destinations, loan }) => {
       }
       {
         hasMoneyLender ?
-        <button onClick={setCurrentScene.bind(null, UI_SCENES.IS_BORROWING)}>{'Visit the Money Lender'}</button>
+        <button onClick={setCurrentScene.bind(null, UI_SCENES.IS_BORROWING)}>{'Visit the Loan Shark'}</button>
         : null
       }
       {
         hasWarehouse ?
-        <button onClick={setCurrentScene.bind(null, UI_SCENES.IS_STORING)}>{'Visit Warehouse'}</button>
+        <button onClick={setCurrentScene.bind(null, UI_SCENES.IS_STORING)}>{'Visit the Warehouse'}</button>
         : null
       }
-      <button onClick={setCurrentScene.bind(null, UI_SCENES.IS_LEAVING)}>{'Leave'}</button>
+      <button onClick={setCurrentScene.bind(null, UI_SCENES.IS_LEAVING)}>{'Travel'}</button>
       {
-        loan <= 0 ?
+        loan > 0 ?
         <Link href="/retire"><button>{'Retire'}</button></Link>
         : null
       }
