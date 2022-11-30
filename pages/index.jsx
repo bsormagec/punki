@@ -5,7 +5,7 @@ import '../styles/index.css';
 export default () => {
   return (
     <div style={{ fontFamily: 'monospace' }}>
-      <div style={{ width: '600px' }}>
+      <div style={{ width: '90vw' }}>
         <h1>{'Nomadic Punks Trader'}</h1>
         <h3>{'A Taipan-like game of profit and adventure in a nomadic world of tribes.'}</h3>
         <p>
