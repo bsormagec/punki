@@ -69,8 +69,8 @@ class Interface extends React.Component {
       <div style={{ fontFamily: 'monospace' }}>
         <div style={{ marginLeft: '10px' }}>
           <h1>{'Nomadic Punks Trader'}</h1>
-          <h2>{`${currentLocation}`}</h2>
-          <div>{`${date.day} ${date.season} ${date.year}`}</div>
+          <h2>Camp {`${currentLocation}`}</h2>
+          <div style={{textTransform: 'capitalize'}}>Week {`${date.day}, ${date.season} ${date.year}`}</div>
           <audio src="/mp3/unstoppable-adventure.mp3" autoPlay muted={!this.state.musicPlaying} loop />
         </div>
 

@@ -26,7 +26,7 @@ const Choices = ({ setCurrentScene, currentIsland, destinations, loan }) => {
       }
       {
         hasWarehouse ?
-        <button onClick={setCurrentScene.bind(null, UI_SCENES.IS_STORING)}>{'Warehouse'}</button>
+        <button onClick={setCurrentScene.bind(null, UI_SCENES.IS_STORING)}>{'Stash'}</button>
         : null
       }
       <button onClick={setCurrentScene.bind(null, UI_SCENES.IS_LEAVING)}>{'Travel'}</button>
