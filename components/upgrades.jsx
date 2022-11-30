@@ -1,10 +1,9 @@
 import * as actions from '../lib/actions';
 import { connect } from 'react-redux';
 import { UI_SCENES } from '../lib/types';
-import { getTotalCargoWeight } from '../lib/selectors';
 
 const Upgrades = (props) => {
-  const { buy, setCurrentScene, currentIsland, cash, storageLeft } = props;
+  const { upgrade, setCurrentScene, currentIsland, cash } = props;
 
   return (
     <div style={{ padding: '10px', width: '320px' }}>
@@ -14,31 +13,31 @@ const Upgrades = (props) => {
         <button onClick={setCurrentScene.bind(null, UI_SCENES.NULL)}>{'Back'}</button>
       </h3>
 
-      {Object.keys(currentIsland.upgrades).map((goodType, i) => {
+      {Object.keys(currentIsland.upgrades).map((upgradeType, i) => {
 
-        const canAfford = Math.floor(cash / currentIsland.upgrades[goodType]);
-        let maxBuy = canAfford;
+        const canAfford = Math.floor(cash / currentIsland.upgrades[upgradeType]);
+        let maxUpgrades = canAfford;
 
         return (
           <div key={i} style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <div>{`${goodType}`}</div>
+            <div>{`${upgradeType}`}</div>
             <div>
               {
-                canAfford >= 1 && storageLeft >= 1 ?
-                <button onClick={buy.bind(null, goodType, 1)}>{1}</button>
+                canAfford >= 1 ?
+                <button onClick={upgrade.bind(null, upgradeType, 1)}>{1}</button>
                 : null
               }
 
               {
-                canAfford >= 5  && storageLeft >= 5 ?
-                <button onClick={buy.bind(null, goodType, 5)}>{5}</button>
+                canAfford >= 5  ?
+                <button onClick={upgrade.bind(null, upgradeType, 5)}>{5}</button>
                 : null
               }
               <button
-                onClick={buy.bind(null, goodType, maxBuy)}
+                onClick={upgrade.bind(null, upgradeType, maxUpgrades)}
                 style={{ minWidth: '90px' }}
               >
-                {`Max (${maxBuy})`}
+                {`Max (${maxUpgrades})`}
               </button>
             </div>
           </div>
@@ -50,7 +49,7 @@ const Upgrades = (props) => {
 
 const mapDispatchToProps = (dispatch) => ({
   setCurrentScene: (sceneType) => dispatch(actions.setCurrentScene(sceneType)),
-  upgrade: (goodType, quantity) => dispatch(actions.buy(goodType, quantity))
+  upgrade: (upgradeType, quantity) => dispatch(actions.upgrade(upgradeType, quantity))
 });
 
 export default connect(
