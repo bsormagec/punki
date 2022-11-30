@@ -4,6 +4,7 @@ import { UI_SCENES } from '../lib/types';
 import Departing from '../components/departing';
 import Buying from '../components/buying';
 import Selling from '../components/selling';
+import Upgrades from '../components/upgrades';
 import Finances from '../components/finances';
 import Stocks from '../components/stocks';
 import Choices from '../components/choices';
@@ -38,6 +39,8 @@ class Interface extends React.Component {
         return <Departing />;
       case UI_SCENES.IS_BUYING:
         return <Buying />;
+      case UI_SCENES.IS_UPGRADING:
+        return <Upgrades />;
       case UI_SCENES.IS_SELLING:
         return <Selling />;
       case UI_SCENES.IS_BANKING:
